@@ -112,5 +112,26 @@ def download_image(url):
     except Exception as e:
         logging.error(f"Failed to download image: {str(e)}")
         return None
-if name == "main":
-main()        
+
+def main():
+    st.title("Pet Meme Generator")
+    
+    if st.button("Get Meme Ideas"):
+        ideas = get_meme_idea()
+        if ideas:
+            selected_idea = st.selectbox("Choose a meme idea:", ideas)
+            
+            if st.button("Generate Meme"):
+                memes = generate_meme(selected_idea)
+                if memes:
+                    for i, meme in enumerate(memes):
+                        image_data = download_image(meme["url"])
+                        if image_data:
+                            st.image(image_data, caption=f"Meme {i+1}")
+                else:
+                    st.error("Failed to generate memes")
+        else:
+            st.error("Failed to get meme ideas")
+
+if __name__ == "__main__":
+    main()
