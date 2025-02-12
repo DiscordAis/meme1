@@ -18,7 +18,7 @@ def get_meme_idea():
          "cat, dog, bird, and fish. about their funny, whimsical, and daily behavior. i want those in positive"
          "tone and relatable to pet owners. the ideas should be in casual bahasa indonesia. you just"
           "need to give the ideas, dont suggest any caption, images,"
-          "emojis, etc. be sharp and crisp and punchy don't verbose")
+          "emojis, etc. be sharp and crisp and punchy don't verbose ALSO don't give the number like 1,2 for 10 sentence also * too")
         url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
         headers = {'Content-Type': 'application/json'}
         payload = {"contents": [{"parts": [{"text": prompt}]}]}
