@@ -14,7 +14,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 # Function to get meme ideas
 def get_meme_idea():
     try:
-        prompt = ("give me 10 meme ideas that relatable to pet such as:,
+        prompt = ("give me 10 meme ideas that relatable to pet such as:,"
                    "cat, dog, bird, and fish. about their funny, whimsical, and daily behavior. i want those in positive"
                    "tone and relatable to pet owners. the ideas should be in casual bahasa indonesia. you just"
                    "need to give the ideas, dont suggest any caption, images,"
