@@ -112,5 +112,3 @@ def download_image(url):
     except Exception as e:
         logging.error(f"Failed to download image: {str(e)}")
         return None
-
-[Rest of the code remains exactly the same...]
