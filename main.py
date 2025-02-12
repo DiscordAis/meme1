@@ -112,5 +112,5 @@ def download_image(url):
     except Exception as e:
         logging.error(f"Failed to download image: {str(e)}")
         return None
-if name == “main”:
+if name == "main":
 main()        
